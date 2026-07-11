@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #07050d;
+  --bg-secondary: #0a0715;
+  --bg-card: #100d1e;
+  --bg-card-hover: #18142a;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --border-primary: rgba(168, 85, 247, 0.1);
+  --border-secondary: rgba(168, 85, 247, 0.2);
+  --bg-input: #18142a;
+  --bg-dropdown: #100d1e;
+}
+
+html.light {
+  --bg-primary: #f6f5fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1ecff;
+  --text-primary: #0a071b;
+  --text-secondary: #4b5563;
+  --text-muted: #8b8f9c;
+  --border-primary: rgba(168, 85, 247, 0.08);
+  --border-secondary: rgba(168, 85, 247, 0.15);
+  --bg-input: #ffffff;
+  --bg-dropdown: #ffffff;
+}
+
+@theme {
+  --font-sans: "Cairo", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Plus Jakarta Sans", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-theme-bg: var(--bg-primary);
+  --color-theme-secondary: var(--bg-secondary);
+  --color-theme-card: var(--bg-card);
+  --color-theme-card-hover: var(--bg-card-hover);
+  --color-theme-text: var(--text-primary);
+  --color-theme-muted: var(--text-secondary);
+  --color-theme-sub: var(--text-muted);
+  --color-theme-border: var(--border-primary);
+  --color-theme-border-glow: var(--border-secondary);
+  --color-theme-input: var(--bg-input);
+  --color-theme-dropdown: var(--bg-dropdown);
+}
+
+/* Custom scroll bar styling for premium dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card-hover);
+  border-radius: 9999px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b2f6c;
+}
+
+/* Base custom classes */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  direction: rtl; /* Set default Arabic layout */
+}
+
+/* Perspective utilities for 3D card tilt */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+

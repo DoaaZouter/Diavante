@@ -1,0 +1,6 @@
+{
+  "name": "Diavante Content House",
+  "description": "ديـفـانـتـي - شركة رائدة في صناعة المحتوى الرقمي والتسويق الاستراتيجي الفعال في سوريا والعالم العربي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
